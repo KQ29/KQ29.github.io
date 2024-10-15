@@ -1,0 +1,255 @@
+/* Dark Mode Toggle Button Styling */
+.theme-toggle-btn {
+    position: fixed;
+    top: 30px;    
+    right: 20px;  /* 20px from the right */
+    z-index: 1000; /* Ensures the button stays on top */
+    background-color: #000;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;  /* Keep the button rounded */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover state */
+.theme-toggle-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #dedede;
+}
+
+/* Focus and active states */
+.theme-toggle-btn:focus,
+.theme-toggle-btn:active {
+    outline: none;
+    border-radius: 8px;  /* Ensure the border-radius remains */
+}
+
+/* Dark theme default variables */
+:root {
+    --background-color: #121212;  
+    --text-color: #4A90E2;       
+    --link-color: #8AB4F8;         
+    --button-bg-color: #FFFFFF;    
+    --button-text-color: #000000;  
+    --icon-color: #B3B3B3;         
+}
+
+/* Apply dark theme to body */
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links in dark mode */
+body.dark-theme a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Styling for Buttons, Excluding Buttons with 'no-dark-mode' Class */
+body.dark-theme button:not(.no-dark-mode) {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Specific Button Adjustments */
+body.dark-theme nav button,
+body.dark-theme .hero .buttons button,
+body.dark-theme .projects .inner > button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--text-color);
+}
+
+/* Dark theme for icons */
+body.dark-theme .icons i {
+    color: var(--icon-color);
+}
+
+/* Base body styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Transitions for other elements */
+button, nav, footer, a {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Styling for Buttons, Excluding Buttons with 'no-dark-mode' Class */
+body.dark-theme button:not(.no-dark-mode) {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode styles for the .about section */
+body.dark-theme .about {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Dark mode styles for .about > p */
+body.dark-theme .about > p {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+
+/* Dark mode styles for .about > h2 */
+body.dark-theme .about > h2 {
+    color: var(--text-color);
+}
+
+/* Dark mode styles for .about .items .item */
+body.dark-theme .about .items .item {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+/* Dark mode styles for .about .items .item .inner */
+body.dark-theme .about .items .item .inner {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+/* Adjust text color inside .about .items .item .inner */
+body.dark-theme .about .items .item .inner a {
+    color: var(--link-color);
+}
+
+body.dark-theme .about .items .item .inner p {
+    color: var(--text-color);
+}
+
+/* Add transitions to the .about section and its children */
+.about,
+.about * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+body.dark-theme .projects {
+    background-color: var(--background-color);
+}
+
+body.dark-theme .projects .inner {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .projects .inner > h2,
+body.dark-theme .projects .inner p.info {
+    color: var(--text-color);
+}
+
+body.dark-theme .projects .inner p.debug {
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+body.dark-theme .projects .inner > button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--text-color);
+}
+
+body.dark-theme .projects .inner > button:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+body.dark-theme .projects .inner .items .item {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+body.dark-theme .projects .inner .items .item i {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+body.dark-theme .projects .inner .items .item a {
+    color: var(--link-color);
+}
+
+body.dark-theme .projects .inner .items .item p {
+    color: var(--text-color);
+}
+
+/* Transition for smooth effect */
+.projects, .projects * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add transitions */
+.contact,
+.contact * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Overrides */
+
+body.dark-theme .contact {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .contact > h2 {
+    color: var(--text-color);
+}
+
+body.dark-theme .contact .items {
+    background-color: var(--background-color);
+}
+
+body.dark-theme .contact .items .item {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+body.dark-theme .contact .items .item a {
+    color: var(--link-color);
+}
+
+body.dark-theme .contact .items .item p {
+    color: var(--text-color);
+}
+
+/* Ensure buttons have transitions */
+.contact .items .item button,
+.no-dark-mode {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Styles for the Button */
+body.dark-theme .projects .inner > button {
+    background-color: var(--button-bg-color); 
+    color: var(--button-text-color);          
+    border: 1px solid var(--text-color);     
+    border-radius: 12px;                     
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-theme .projects .inner > button:hover {
+    background-color: var(--background-color); 
+    color: var(--text-color);                  
+    border-color: var(--text-color);           
+    border-radius: 12px;                       
+}
+
+body.dark-theme .projects .inner > button:focus,
+body.dark-theme .projects .inner > button:active {
+    outline: none;
+    border-radius: 12px; 
+}
