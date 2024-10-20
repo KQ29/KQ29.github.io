@@ -643,3 +643,87 @@ body.fade-out {
     transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
 }
 
+@media screen and (max-width: 786px) {
+    .projects .inner {
+        padding: 20px;
+    }
+
+    .projects .inner h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .projects .inner p.info {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .projects .items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects .items .item {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .projects .items .item i {
+        font-size: 24px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .projects .items .item a {
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .projects .items .item p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .projects .inner button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 787px) {
+    .projects .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .projects .items .item {
+        padding: 20px;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .projects .items .item p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .projects .items .item a {
+        font-size: 16px;
+    }
+
+    .projects .items .item i {
+        font-size: 24px;
+    }
+}
