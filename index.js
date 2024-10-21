@@ -1,26 +1,11 @@
 // List of titles to rotate through
-const titles = ["Software Engineer", "Cybersecurity Expert", "Data Scientist", "Machine Learning Specialist", "Artificial Intelligence Engineer"];
-
-// Set interval to change the text every 3 seconds
-let index = 0;
-const changeText = () => {
-    const textElement = document.getElementById('changing-text');
-    
-    // Fade out effect before changing the text
-    textElement.style.opacity = 0;
-
-    setTimeout(() => {
-        // Replace the text content
-        textElement.textContent = titles[index];
-        textElement.style.opacity = 1; // Fade in effect
-        
-        // Update index for the next text
-        index = (index + 1) % titles.length; // Loop back to the first title
-    }, 500); // Wait for fade-out effect before changing text
-};
-
-// Start the text rotation
-setInterval(changeText, 3000);
+const titles = [
+    "Software Engineer", 
+    "Cybersecurity Expert", 
+    "Data Scientist", 
+    "Machine Learning Specialist", 
+    "Artificial Intelligence Engineer"
+];
 
 // List of paragraphs to rotate through
 const paragraphs = [
@@ -31,26 +16,52 @@ const paragraphs = [
     "Architect AI solutions with grace and simplicity, transforming intricate concepts into beautifully functional creations. Cultivate your passion for innovation through intuitive design and flawless execution."
 ];
 
+// List of image sources to rotate through
+const images = [
+    'assets/DALL·E 2024-10-21 22.06.20 - A software engineering themed image for a portfolio website, featuring a realistic computer screen with clean, organized lines of code. One screen sho.webp',
+    'assets/DALL·E 2024-10-21 22.08.14 - A Cybersecurity Expert themed image for a portfolio website, featuring elements that convey digital security and protection. The design includes abstr.webp',
+    'assets/DALL·E 2024-10-21 22.09.10 - A Data Scientist themed image for a portfolio website, featuring elements related to data analysis and machine learning. The design includes abstract .webp',
+    'assets/DALL·E 2024-10-21 22.09.45 - A Machine Learning Specialist themed image for a portfolio website, featuring abstract representations of neural networks, algorithms, and data proces.webp',
+    'assets/DALL·E 2024-10-21 22.01.56 - A futuristic AI robotic theme for a portfolio website, featuring sleek, metallic robots with glowing blue accents, performing various tasks like codin.webp'
+];
 
-let paragraphIndex = 0;
-const changeParagraphText = () => {
-    const paragraphElement = document.getElementById('changing-paragraph');
-    
-    // Fade out effect before changing the text
+// Set initial index for all
+let index = 0;
+
+// Get elements
+const textElement = document.getElementById('changing-text');
+const paragraphElement = document.getElementById('changing-paragraph');
+const imageElement = document.getElementById('rotating-image');
+
+// Function to change text, paragraph, and image every 3 seconds
+const changeContent = () => {
+    // Fade out effect for text, paragraph, and image
+    textElement.style.opacity = 0;
     paragraphElement.style.opacity = 0;
+    imageElement.style.opacity = 0;
 
     setTimeout(() => {
-        // Replace the text content
-        paragraphElement.textContent = paragraphs[paragraphIndex];
-        paragraphElement.style.opacity = 1; // Fade in effect
+        // Change text
+        textElement.textContent = titles[index];
         
-        // Update index for the next paragraph
-        paragraphIndex = (paragraphIndex + 1) % paragraphs.length; // Cycle through the paragraphs
-    }, 500); // Wait for fade-out effect before changing text
+        // Change paragraph
+        paragraphElement.textContent = paragraphs[index];
+        
+        // Change image
+        imageElement.src = images[index];
+
+        // Fade in effect for text, paragraph, and image
+        textElement.style.opacity = 1;
+        paragraphElement.style.opacity = 1;
+        imageElement.style.opacity = 1;
+
+        // Update index for next change
+        index = (index + 1) % titles.length; // Loop back when reaching the end
+    }, 1000); // Wait 1 second for fade-out before changing content
 };
 
-// Start the paragraph text rotation
-setInterval(changeParagraphText, 3000); 
+// Start the synchronized rotation every 3 seconds
+setInterval(changeContent, 3000);
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');

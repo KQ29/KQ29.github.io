@@ -865,3 +865,7 @@ body.fade-out {
 .backdrop.active {
     display: block;
 }
+
+#changing-text, #changing-paragraph, #rotating-image {
+    transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+}

@@ -18,7 +18,8 @@
 .theme-toggle-btn:hover {
     background-color: #fff;
     color: #000;
-    border-color: #dedede;
+    border-color: #4A90E2; /* Enhance hover border color */
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.6); /* Brighten shadow on hover */
 }
 
 /* Hidden State */
@@ -310,3 +311,12 @@ body.dark-theme .menu-toggle.hidden {
     opacity: 0;
     pointer-events: none;
 }
+
+/* Focus and active states */
+.theme-toggle-btn:focus,
+.theme-toggle-btn:active {
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.8); /* Stronger focus shadow */
+}
+
