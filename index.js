@@ -18,11 +18,11 @@ const paragraphs = [
 
 // List of image sources to rotate through
 const images = [
-    'assets/DALL·E 2024-10-21 22.06.20 - A software engineering themed image for a portfolio website, featuring a realistic computer screen with clean, organized lines of code. One screen sho.webp',
-    'assets/DALL·E 2024-10-21 22.08.14 - A Cybersecurity Expert themed image for a portfolio website, featuring elements that convey digital security and protection. The design includes abstr.webp',
-    'assets/DALL·E 2024-10-21 22.09.10 - A Data Scientist themed image for a portfolio website, featuring elements related to data analysis and machine learning. The design includes abstract .webp',
-    'assets/DALL·E 2024-10-21 22.09.45 - A Machine Learning Specialist themed image for a portfolio website, featuring abstract representations of neural networks, algorithms, and data proces.webp',
-    'assets/DALL·E 2024-10-21 22.01.56 - A futuristic AI robotic theme for a portfolio website, featuring sleek, metallic robots with glowing blue accents, performing various tasks like codin.webp'
+    'assets/SW.webp',
+    'assets/CE.webp',
+    'assets/DS.webp',
+    'assets/MLS.webp',
+    'assets/AI.webp'
 ];
 
 // Set initial index for all
