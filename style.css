@@ -754,19 +754,6 @@ body.fade-out {
     background-color: #f0f0f0;   /* Slightly darker on hover */
 }
 
-/* Dark Mode Menu Toggle */
-body.dark-theme .menu-toggle {
-    /* Retain the same styles to ensure consistency */
-    background: none;
-    border: none;
-    padding: 8px;          /* Ensure padding is the same */
-    border-radius: 4px;    /* Ensure border-radius is the same */
-}
-
-body.dark-theme .menu-toggle i {
-    color: var(--text-color);
-}
-
 /* Show the menu toggle button on small screens */
 @media screen and (max-width: 768px) {
     nav {
