@@ -11,6 +11,7 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    opacity: 1; 
 }
 
 /* Hover state */
@@ -18,6 +19,12 @@
     background-color: #fff;
     color: #000;
     border-color: #dedede;
+}
+
+/* Hidden State */
+.theme-toggle-btn.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable interactions when hidden */
 }
 
 /* Focus and active states */
@@ -252,4 +259,54 @@ body.dark-theme .projects .inner > button:focus,
 body.dark-theme .projects .inner > button:active {
     outline: none;
     border-radius: 12px; 
+}
+
+/* Dark Mode Styles for Sidebar */
+body.dark-theme .sidebar {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .sidebar .sidebar-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-theme .sidebar .logo a {
+    color: var(--text-color);
+}
+
+body.dark-theme .sidebar .sidebar-links a {
+    color: var(--link-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-theme .sidebar .sidebar-links a:hover {
+    background-color: var(--hover-background);
+}
+
+body.dark-theme .sidebar .sidebar-links a i {
+    color: var(--icon-color);
+}
+
+body.dark-theme .menu-toggle {
+    background-color: #2a2a2a;   /* Set background to #2a2a2a */
+    border: none;                /* Remove any borders */
+    padding: 8px;
+    border-radius: 4px;
+    opacity: 1;                  /* Ensure initial opacity is set */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+body.dark-theme .menu-toggle i {
+    color: var(--text-color);    /* Ensure icon color matches text color */
+}
+
+/* Hover effect in dark mode */
+body.dark-theme .menu-toggle:hover {
+    background-color: #3a3a3a;   /* Slightly lighter on hover */
+}
+
+body.dark-theme .menu-toggle.hidden {
+    opacity: 0;
+    pointer-events: none;
 }

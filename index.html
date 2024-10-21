@@ -38,8 +38,40 @@
             <a href="#youtube">Youtube</a>
             <a href="about_me.html">About</a>
         </div>
-        <button><i class="ri-github-fill"></i> My Projects</button>
+        <a href="https://github.com/KQ29" target="_blank">
+            <button class="projects-button">
+              <i class="ri-github-fill"></i> My Projects
+            </button>
+          </a>          
     </nav>
+
+    <!-- Menu toggle button for small screens -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-controls="sidebar" aria-expanded="false">
+        <i class="ri-menu-line"></i>
+    </button>
+
+    <!-- Sidebar for small screens -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="assets/logo_rounded.png" alt="Personal Logo" loading="lazy">
+                <a href="#">KI29</a>
+            </div>
+        </div>
+        <div class="sidebar-links">
+            <a href="#docs"><i class="ri-file-list-line"></i> Docs</a>
+            <a href="https://github.com/KQ29?tab=repositories"><i class="ri-github-line"></i> Projects</a>
+            <a href="#blog"><i class="ri-chat-3-line"></i> Blog</a>
+            <a href="#youtube"><i class="ri-youtube-line"></i> YouTube</a>
+            <a href="about_me.html"><i class="ri-user-line"></i> About</a>
+            <a href="https://github.com/KQ29" class="projects-button">
+                <i class="ri-github-fill"></i> My Projects
+            </a>
+        </div>
+    </div>
+
+    <!-- Backdrop overlay -->
+    <div class="backdrop" id="backdrop"></div>
 
     <!-- Hero Section -->
     <div class="hero">

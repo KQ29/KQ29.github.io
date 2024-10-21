@@ -727,3 +727,154 @@ body.fade-out {
         font-size: 24px;
     }
 }
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    background-color: #fff;      /* Set background to white */
+    border: 1px solid #ccc;      /* Add light gray border */
+    padding: 8px;
+    border-radius: 4px;          /* Rounded corners */
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 2000;
+    opacity: 1;                
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.menu-toggle i {
+    color: #000;                 /* Black icon */
+}
+
+/* Hover effect in light mode */
+.menu-toggle:hover {
+    background-color: #f0f0f0;   /* Slightly darker on hover */
+}
+
+/* Dark Mode Menu Toggle */
+body.dark-theme .menu-toggle {
+    /* Retain the same styles to ensure consistency */
+    background: none;
+    border: none;
+    padding: 8px;          /* Ensure padding is the same */
+    border-radius: 4px;    /* Ensure border-radius is the same */
+}
+
+body.dark-theme .menu-toggle i {
+    color: var(--text-color);
+}
+
+/* Show the menu toggle button on small screens */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Hidden off-screen */
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #e8e8e8;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1500;
+}
+
+.sidebar.active {
+    left: 0; /* Slide in when active */
+}
+
+.sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px 16px; /* Adjusted top padding */
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.sidebar .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .logo img {
+    width: 50px;  
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.sidebar .logo a {
+    font-size: 18px; /* Reduced font size */
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Sidebar Links Styles */
+.sidebar .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.sidebar .sidebar-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0; /* Adjusted padding */
+    font-size: 16px; /* Adjusted font size */
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #e8e8e8;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .sidebar-links a:last-child {
+    border-bottom: none;
+}
+
+.sidebar .sidebar-links a i {
+    margin-right: 8px;  /* Adjusted spacing */
+    font-size: 20px;    /* Adjusted icon size */
+    color: inherit;
+}
+
+.sidebar .sidebar-links a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.sidebar .sidebar-links a.projects-button {
+    font-weight: bold;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e8e8e8;
+}
+
+/* Backdrop overlay */
+.backdrop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1400;
+}
+
+.backdrop.active {
+    display: block;
+}
